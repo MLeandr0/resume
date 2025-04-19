@@ -1,0 +1,74 @@
+body{
+    min-height: 100vh; 
+    margin: 0px; 
+    background-color: none; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    font-family: 'source sans pro', sans-serif;
+}
+
+.nav-bar{
+    background-color: rgb(229, 229, 229);
+    flex-shrink: 0;
+    width: 100%; 
+    height: 5vh;
+}
+
+.resume {
+    margin: 2% 0% 5% 0%;
+    width: 60%;
+    border-radius: 1%;
+    padding-bottom: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8% 0px 0px 0px;
+    width: 100%;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    color: rgb(0, 79, 144);
+}
+
+.line {
+    width: 85%;
+    height: 0;
+    border: 0.1vw solid rgb(0, 79, 144);
+    margin: 0.2vw 0.2vw 0.2vw 0px;
+    display: inline-block;
+}
+
+.section {
+    margin: 0px; 
+    display:inline-block; 
+    font-size: 1.3vw;
+    color: rgb(0, 79, 144);
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.competencies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
