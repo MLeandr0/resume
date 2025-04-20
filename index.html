@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html style="margin: 0; height: 100%; padding: 0;">
     <head>
-        <title>Resume Test</title>
+        <title>MLeandr0's Resume</title>
         <link rel="stylesheet" href="style.css"> 
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <div class="nav-bar"></div>
+        <div class="nav-bar" style="display: flex; width: 100%; flex-direction: row; justify-content: end; align-items: center;">
+            <button style="margin-right: 5%;" onclick="trocarIdioma()">
+                <div id="lang-toggle" class="lang-flag" onclick="toggleLanguage()" title="Mudar idioma / Switch language">
+                    <img id="flag_icon" src="assets\us_flag.svg" alt="PT" />
+                </div>
+            </button>
+        </div>
 
         <div class="resume">
 
@@ -17,7 +24,7 @@
                     <div class="header-contacts" style="width: 85%; height:100%; display: flex; justify-content: space-evenly; font-size: 0.7vw"> 
                         <div style="display: flex; flex-direction: row; align-items: center;">
                             <img src="assets\pin.svg" alt="pin-icon" style="width: 0.9vw; height: 0.9vw; margin-right: 0.1vw;"/>
-                            <h2>Quixadá - CE, Brasil</h2>    
+                            <h2 id="local"></h2>    
                         </div>
                         
                         <div style="display: flex; flex-direction: row; align-items: center;">
@@ -39,7 +46,7 @@
 
                 <div class="education">
                     <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                        <h1 class="section">Formação</h1>
+                        <h1 id="formation" class="section">Formação</h1>
                         <div class="line"></div>
                     </div>
                     
@@ -65,18 +72,18 @@
 
                 <div class="experience">
                     <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                        <h1 class="section" style="width:33%">Experiência Profissional</h1>
+                        <h1 id="professional_experience" class="section" style="width:33%"></h1>
                         <div class="line"></div>
                     </div>
 
                     <div style="display: flex; font-size: clamp(1vw, 1rem, 1vw); flex-direction: column; width: 100%; justify-content: center; align-items: center;">
                         <div style="display:flex; flex-direction: row; width: 86%; justify-content: space-between;">
                             <div style="width: 75%;">
-                                <p style="margin-bottom: 1%;"><b>Desenvolvedor FullStack,</b> Universidade Federal do Ceará</p>
+                                <p style="margin-bottom: 1%;"><b id="experience_posistion"></b> Universidade Federal do Ceará</p>
                                 <ul style="padding-left: 0%; margin-top: 0%;">
-                                    <li style="margin-left: 5%; margin-bottom: 1%">Desenvolvi e otimizei uma aplicação para gestão de provas.</li>
-                                    <li style="margin-left: 5%; margin-bottom: 1%">Colaborei na refatoração da interface utilizando Vue.js e Vuetify.</li>
-                                    <li style="margin-left: 5%; margin-bottom: 1%">No backend, com Spring Boot (Java), implementei novas funcionalidades, realizei
+                                    <li id="first_experience" style="margin-left: 5%; margin-bottom: 1%">Desenvolvi e otimizei uma aplicação para gestão de provas.</li>
+                                    <li id="second_experience" style="margin-left: 5%; margin-bottom: 1%">Colaborei na refatoração da interface utilizando Vue.js e Vuetify.</li>
+                                    <li id="third_experience" style="margin-left: 5%; margin-bottom: 1%">No backend, com Spring Boot (Java), implementei novas funcionalidades, realizei
                                         a refatoração de módulos existentes e corrigi bugs.</li>
                                 </ul>
                             </div>
@@ -105,31 +112,31 @@
 
                 <div class="competencies">
                     <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                        <h1 class="section">Competências</h1>
+                        <h1 id="competencies_title" class="section">Competências</h1>
                         <div class="line"></div>
                     </div>
                     
                     <div style="font-size: clamp(1vw, 1rem, 1vw); width: 86%;">            
                         <div>
-                            <p><b>Linguagens:</b> Java, TypeScript, Python, C++, Kotlin, SQL</p>
-                            <p><b>Tecnologias:</b> Spring Boot, Vue, Docker, PostgreSQL</p>
-                            <p><b>Idiomas:</b> Português nativo, Inglês fluente.</p>
+                            <p id="languages">Linguagens: Java, TypeScript, Python, C++, Kotlin, SQL</p>
+                            <p id="technologies">Tecnologias: Spring Boot, Vue, Docker, PostgreSQL</p>
+                            <p id="languages_spoken">Idiomas: Português nativo, Inglês fluente.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="experience">
                     <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                        <h1 class="section" style="width:41%">Atividades Extracurriculares</h1>
+                        <h1 id="activites" class="section" style="width:41%">Atividades Extracurriculares</h1>
                         <div class="line"></div>
                     </div>
 
                     <div style="display: flex; font-size: clamp(1vw, 1rem, 1vw); flex-direction: column; width: 100%; justify-content: center; align-items: center;">
                         <div style="display:flex; flex-direction: row; width: 86%; justify-content: space-between;">
-                            <div  style="width: 75%;">
-                                <p style="margin-bottom: 1%; margin-top: 1%;"><b>Bolsista pesquisador,</b> Insight Lab</p>
+                            <div style="width: 75%;">
+                                <p id="first_position" style="margin-bottom: 1%; margin-top: 1%;"><b>Bolsista pesquisador,</b> Insight Lab</p>
                                 <ul style="padding-left: 5%; margin-top: 0%;">
-                                    <li>Participei de uma pesquisa envolvendo a coleta, tratamento e uso de dados não
+                                    <li id="fposition_activities">Participei de uma pesquisa envolvendo a coleta, tratamento e uso de dados não
                                         rotulados para analisar suas correlações por meio da clusterização.</li>
                                 </ul>
                             </div>
@@ -141,9 +148,9 @@
 
                         <div style="display:flex; flex-direction: row; width: 86%; justify-content: space-between;">
                             <div  style="width: 75%;">
-                                <p style="margin-bottom: 1%; margin-top: 1%;"><b>Bolsista monitor de programação,</b> Universidade Federal do Ceará</p>
+                                <p id="second_position" style="margin-bottom: 1%; margin-top: 1%;"><b>Bolsista monitor de programação,</b> Universidade Federal do Ceará</p>
                                 <ul style="padding-left: 5%; margin-top: 0%;">
-                                <li>Participei no auxilio de alunos em programação orientada a objetos e fundamentos com Java e C++.</li>
+                                <li id="sposition_activities">Participei no auxilio de alunos em programação orientada a objetos e fundamentos com Java e C++.</li>
                                 </ul>
                             </div>
                             <div style="gap: 0%">

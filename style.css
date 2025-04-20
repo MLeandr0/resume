@@ -72,3 +72,35 @@ body{
     align-items: center;
     width: 100%;
 }
+
+.lang-flag {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.lang-flag img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+}
+
+.lang-flag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url('assets/br_flag.svg');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.lang-flag:hover::after {
+    opacity: 1;
+}
