@@ -8,11 +8,10 @@
 
     <body>
         <div class="nav-bar" style="display: flex; width: 100%; flex-direction: row; justify-content: end; align-items: center;">
-            <button style="margin-right: 5%;" onclick="trocarIdioma()">
-                <div id="lang-toggle" class="lang-flag" onclick="toggleLanguage()" title="Mudar idioma / Switch language">
-                    <img id="flag_icon" src="assets\us_flag.svg" alt="PT" />
-                </div>
-            </button>
+            <input type="checkbox" id="teste" onclick="trocarIdioma()">
+            <label class="flat-toggle" for="teste">
+                <span class="flat-slider"></span>
+            </label>
         </div>
 
         <div class="resume">

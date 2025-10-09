@@ -2,8 +2,7 @@ const traducoes = {
     pt: {
       flag_icon: "assets/br_flag.svg",
 
-      local: "Quixadá - CE, Brasil",
-
+      local: "Brasil",
       formation: "Formação",
       professional_experience: "Experiência Profissional",
       experience_posistion: "Desenvolvedor FullStack,",
@@ -26,7 +25,7 @@ const traducoes = {
     en: {
       flag_icon: "assets/us_flag.svg",
 
-      local: "Quixadá - CE, Brazil",
+      local: "Brazil",
 
       formation: "Education",
       professional_experience: "Professional Experience",
