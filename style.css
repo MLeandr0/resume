@@ -34,19 +34,23 @@ body {
   color: rgb(0, 79, 144);
 }
 
-.line {
-  width: 85%;
-  height: 0;
-  border: 0.1vw solid rgb(0, 79, 144);
-  margin: 0.2vw 0.2vw 0.2vw 0px;
-  display: inline-block;
+.section-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 92%;
+  gap: 0.5vw;
 }
 
 .section {
-  margin: 0px;
-  display: inline-block;
+  margin: 0;
   font-size: 1.3vw;
   color: rgb(0, 79, 144);
+  white-space: nowrap;
+}
+
+.line {
+  flex-grow: 1;
+  border-bottom: 0.1vw solid rgb(0, 79, 144);
 }
 
 .education {
@@ -96,7 +100,7 @@ body {
   position: relative;
   transition: all 0.3s ease;
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+              inset -2px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .flat-slider:before {
@@ -119,7 +123,6 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5vh;
-  font-weight: 600;
   transition: all 0.3s ease;
 }
 
@@ -133,12 +136,13 @@ body {
   transition: all 0.3s ease;
 }
 
-input:checked~.flat-slider {
+.flat-toggle:has(input:checked) .flat-slider {
+  background-color: rgb(0, 79, 144);
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+              inset -2px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
-input:checked+.flat-toggle .flat-slider:before {
+.flat-toggle input:checked~.flat-slider:before {
   transform: translateX(3.5vh);
 }
 
@@ -150,18 +154,22 @@ input {
   pointer-events: none;
 }
 
-input:not(:checked)~.flat-toggle:before {
+.flat-toggle::before {
+  font-weight: 600;
   color: black;
 }
 
-input:not(:checked)~.flat-toggle:after {
+.flat-toggle::after {
+  font-weight: 50;
   color: grey;
 }
 
-input:checked~.flat-toggle:after {
+.flat-toggle:has(input:checked)::before {
+  font-weight: 50;
+  color: grey;
+}
+
+.flat-toggle:has(input:checked)::after {
+  font-weight: 600;
   color: black;
-}
-
-input:checked~.flat-toggle:before {
-  color: grey;
 }

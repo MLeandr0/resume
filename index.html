@@ -3,6 +3,7 @@
 
 <head>
     <title>MLeandr0's Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -11,7 +12,8 @@
     <div class="nav-bar"
         style="display: flex; width: 100%; flex-direction: row; justify-content: end; align-items: center;">
         <input type="checkbox" id="teste" onclick="changeLanguage()">
-        <label class="flat-toggle" for="teste">
+        <label class="flat-toggle">
+            <input type="checkbox" id="teste" onclick="changeLanguage()">
             <span class="flat-slider"></span>
         </label>
     </div>
@@ -51,7 +53,7 @@
             </div>
 
             <div class="education">
-                <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
+                <div class="section-wrapper">
                     <h1 id="formation" class="section">Formação</h1>
                     <div class="line"></div>
                 </div>
@@ -78,8 +80,8 @@
             </div>
 
             <div class="experience">
-                <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                    <h1 id="professional_experience" class="section" style="width:33%"></h1>
+                <div class="section-wrapper">
+                    <h1 id="professional_experience" class="section"></h1>
                     <div class="line"></div>
                 </div>
 
@@ -127,7 +129,7 @@
             </div>
 
             <div class="competencies">
-                <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
+                <div class="section-wrapper">
                     <h1 id="competencies_title" class="section">Competências</h1>
                     <div class="line"></div>
                 </div>
@@ -142,8 +144,8 @@
             </div>
 
             <div class="experience">
-                <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
-                    <h1 id="activites" class="section" style="width:41%">Atividades Extracurriculares</h1>
+                <div class="section-wrapper">
+                    <h1 id="activites" class="section">Atividades Extracurriculares</h1>
                     <div class="line"></div>
                 </div>
 
@@ -183,7 +185,7 @@
             </div>
 
             <div class="education">
-                <div style="display: flex; flex-direction: row; align-items: end; width: 92%;">
+                <div class="section-wrapper">
                     <h1 class="section">Certificados</h1>
                     <div class="line"></div>
                 </div>
